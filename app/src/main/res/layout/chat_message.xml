@@ -20,47 +20,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ImageView
+            android:id="@+id/chat_img"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="14dp"
+            android:src="@mipmap/ic_launcher_round"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0.5dp"
+            android:layout_below="@id/chat_img"
+            android:layout_toEndOf="@id/chat_img"
+            android:background="#82bdbdbd"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
 
-            <ImageView
-                android:id="@+id/userImage"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/textLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="4dp">
 
             <TextView
-                android:id="@+id/userTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="User Name"
-                android:textSize="22sp"
+                android:id="@+id/chatName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="user name"
+                android:fontFamily="sans-serif-light"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/userImage"
-                app:layout_constraintStart_toEndOf="@+id/userImage"
-                app:layout_constraintTop_toTopOf="@id/userImage" />
+                android:textSize="17sp"
+                android:textColor="#000000"/>
 
             <TextView
-                android:id="@+id/messageText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="10dp"
-                android:maxLines="5"
-                android:text="message"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userImage" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:id="@+id/chatMessage"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="3dp"
+                android:text="Message"
+                android:textSize="15sp"
+                android:textColor="#91000000"/>
+
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

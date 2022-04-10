@@ -45,7 +45,7 @@ public class ChatActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View view){
-                EditText text = findViewById(R.id.messageET);
+                EditText text = findViewById(R.id.writeMessage);
                 chatMessage m = new chatMessage(account.getPhotoUrl().toString(), account.getDisplayName(), account.getId(), text.getText().toString());
                 adapter.addMessage(m);
                 text.setText("");

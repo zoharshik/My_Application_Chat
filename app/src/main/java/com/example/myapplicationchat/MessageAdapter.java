@@ -89,8 +89,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageViewHolder> {
     public void onBindViewHolder(@NonNull MessageViewHolder holder, int position) {
         chatMessage message = messages.get(position);
         holder.message.setText(message.message);
-        holder.userName.setText(message.userName);
-        Glide.with(holder.userImage.getContext()).load(message.userPhoto).into(holder.userImage);
+        holder.name.setText(message.userName);
+        Glide.with(holder.Image.getContext()).load(message.userPhoto).into(holder.Image);
     }
 
     @Override
